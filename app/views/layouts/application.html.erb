@@ -21,7 +21,7 @@
         </div>
       </div>
       <div class="col-4 slogan">
-        Splurting out unsolicited advice about entrepreneurship since 2016        
+        Quotes so fresh you could find them at a farmers market.
       </div>
       <div class="col-5 links">
         <%= link_to 'Contribute', '#' %>
@@ -34,6 +34,22 @@
 
     <br class="clear" />
 
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <%= link_to "This isn't enough, I need more", "#", class: 'next-quote' %>
+          </div>
+          <div class="col-6 footer-blurb">
+            Proudly created by Philip, a student at the coding bootcamp, The Firehose Project: <a href="http://thefirehoseproject.com">Learn how to code here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>
