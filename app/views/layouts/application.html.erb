@@ -11,22 +11,24 @@
   <body>
     <header class ="row">
       <div class="col-3">
-        <div class="circle">
-          <br />
-          Listen
-          <br />
-          to these
-          <br />
-          quotes
+        <%= link_to root_path, class: 'logo' do %>
+          <div class="circle">
+            <br />
+            Listen
+            <br />
+            to these
+            <br />
+            quotes
+          </div>
+        <% end %>
         </div>
-      </div>
-      <div class="col-4 slogan">
-        Quotes so fresh you could find them at a farmers market.
-      </div>
-      <div class="col-5 links">
-        <%= link_to 'Contribute', '#' %>
-        <%= link_to 'About', '#' %>
-      </div>
+        <div class="col-4 slogan">
+          Quotes so fresh you could find them at a farmers market.
+        </div>
+        <div class="col-5 links">
+          <%= link_to 'Contribute', new_quote_path %>
+          <%= link_to 'About', '#' %>
+        </div>
 
     </header>
 
@@ -42,7 +44,7 @@
       <div class="container">
         <div class="row">
           <div class="col-6">
-            <%= link_to "This isn't enough, I need more", "#", class: 'next-quote' %>
+            <%= link_to "This isn't enough, I need more", root_path, class: 'next-quote' %>
           </div>
           <div class="col-6 footer-blurb">
             Proudly created by Philip, a student at the coding bootcamp, The Firehose Project: <a href="http://thefirehoseproject.com">Learn how to code here</a>
