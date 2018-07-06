@@ -1,3 +1,6 @@
+/*
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+*/
 @import "bootstrap";
 
 .clear {
@@ -38,6 +41,8 @@
   color: black;
   font-size: 25px;
   border-bottom: 1px solid #dfdfdf;
+  font-family: 'rubikmedium', sans-serif;
+  font-weight: bold;
 }
 
 header {
@@ -46,4 +51,22 @@ header {
 
 hr {
   clear: both;
+}
+
+h1{
+  font-family: 'rubikmedium', sans-serif;
+  font-weight: bold;
+  font-size: 48px;
+  /*
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  */
+}
+
+h2{
+  font-family: 'rubikmedium_italic', sans-serif;
+  /*
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  */
 }
