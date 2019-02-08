@@ -10,13 +10,13 @@
 
   <body>
     <header class ="row">
-      <div class="col-3">
+      <div class="col-2">
         <%= link_to root_path, class: 'logo' do %>
           <div class="circle">
             <br />
-            Listen
+            Check
             <br />
-            to these
+            out these
             <br />
             quotes
           </div>
@@ -24,16 +24,35 @@
         </div>
         <div class="col col-sm-4 hidden-xs-down slogan">
           Quotes so fresh you could find them at a farmers market.
-
         </div>
         <div class="col-10 offset-1 offset-sm-0 col-sm-5 links">
 
     <!-- Button trigger modal -->
-          <%= link_to 'Contribute', '#', data: {toggle: 'modal', target: '#myModal'} %>   
-          &nbsp;&nbsp;       
-          <%= link_to 'About', about_path %>
-          &nbsp;&nbsp;  
-          <%= link_to 'Sign up now!', signup_path,  class: "btn btn-sm btn-primary" %>
+
+
+          <ul class="nav navbar-right">
+            <li><%= link_to 'About', about_path %></li>&nbsp;&nbsp;&nbsp;&nbsp;
+            <% if logged_in? %>
+              <li><%= link_to "Users", '#' %></li>&nbsp;&nbsp;&nbsp;&nbsp;
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">   Account <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                <li><%= link_to 'Contribute', '#', data: {toggle: 'modal', target: '#myModal'} %></li>    
+                  <li><%= link_to "Profile", current_user %></li>
+                  <li><%= link_to "Settings", '#' %></li>
+
+                  <li class="divider"></li>
+                  <li>
+                    <%= link_to "Log out", logout_path, method: :delete %>
+                  </li>
+                </ul>
+              </li>
+              <% else %>
+                <li><%= link_to "Log in", login_path %></li>
+              <% end %>
+            </ul>
+
         </div>
     </header>
 
